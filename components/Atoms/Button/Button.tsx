@@ -2,11 +2,11 @@ import React from 'react'
 
 
 interface props {
-  text: string,
-  onClick: any,
-  type: any
-  className: string
-  disabled: boolean
+  text?: string,
+  onClick?: any,
+  type?: any
+  className?: string
+  disabled?: boolean
 }
 
 function Button(props:props) {

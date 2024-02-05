@@ -1,10 +1,9 @@
-import LeftSection from "@/components/LeftSection/LeftSection";
-import Image from "next/image";
+import EditSection from '@/components/EditSection/EditSection';
 
 export default function Home() {
   return (
     <main>
-      <LeftSection />
+      <EditSection />
     </main>
   );
 }

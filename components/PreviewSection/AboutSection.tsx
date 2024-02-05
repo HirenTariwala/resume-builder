@@ -1,15 +1,12 @@
 import React from 'react';
-interface Props {
-  about: string;
-  primaryColor: string;
-  secondaryColor: string;
-}
-function AboutSection(props: Props) {
-  const { about, secondaryColor, primaryColor } = props;
+import { AboutProps } from './types';
+
+function AboutSection(props: AboutProps) {
+  const { about} = props;
   return (
-    <div className={`text-left p-2  pb-4 h-fit`}>
+    <div className={`text-left h-fit text-justify`}>
       <p
-        className={`ml-[9.1%] text-sm 
+        className={`text-sm 
         text-[black]`}
       >
         {about.length === 0
