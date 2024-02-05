@@ -2,11 +2,75 @@
 @tailwind components;
 @tailwind utilities;
 
-
 body {
   background-color: rgb(255, 252, 252);
 }
 
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
+}
+
+ul li {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  &:before {
+    content: '• ';
+    margin-left: 0px;
+  }
+}
+
+ol li {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  &:before {
+    list-style-type: decimal;
+    margin-left: 0px;
+  }
+}
+.ck-editor__editable_inline {
+  padding: 0 30px !important;
+  margin: 0 !important;
+}
+
+input[type='checkbox'] {
+  line-height: normal;
+  width: 20px;
+  height: 20px;
+}
+
+.ck-list-bogus-paragraph {
+  display: -webkit-inline-box !important;
+}
+
+@media print {
+  ul li {
+    list-style-type: none;
+  }
+
+  ul li:before {
+    content: '•' !important;
+    margin-left: -10px !important;
+  }
+}
+
+@media print {
+  ol li {
+    list-style-type: none;
+  }
+
+  ol li:before {
+    /* content: '1' !important; */
+    list-style-type: decimal;
+    margin-left: -10px !important;
+  }
+}
+
+.ck-content li {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
 }
