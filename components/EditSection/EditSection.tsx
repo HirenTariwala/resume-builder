@@ -36,7 +36,7 @@ export default function EditSection() {
   const [educations, setEducations] = useState<EducationDataType[]>([
     {
       university: '',
-      grade: '',
+      degree: '',
       graduationStartYear: '',
       graduationEndYear: '',
     },
@@ -67,7 +67,7 @@ export default function EditSection() {
           ...prev,
           {
             university: '',
-            grade: '',
+            degree: '',
             graduationStartYear: '',
             graduationEndYear: '',
           },
@@ -201,7 +201,7 @@ export default function EditSection() {
         image: { type: 'jpeg', quality: 0.98 },
         html2canvas: { scale: 3 },
         jsPDF: { unit: 'pt', format: 'a4', orientation: 'portrait' },
-        pagebreak: { mode: ['avoid-all', 'css', 'legacy'] },
+        // pagebreak: { mode: ['avoid-all', 'css', 'legacy'] },
         autoPaging: 'text',
       };
       html2pdf().from(resumeContainer).set(pdfOptions).save();
@@ -520,10 +520,10 @@ export default function EditSection() {
                                 index
                               )
                             }
-                            name='grade'
-                            placeholder='Grade'
+                            name='degree'
+                            placeholder='Degree'
                             className='p-2 rounded-sm outline-none mt-3 text-black w-[100%]'
-                            value={education.grade}
+                            value={education.degree}
                           />
                         </div>
 

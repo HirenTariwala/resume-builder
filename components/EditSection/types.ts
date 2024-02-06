@@ -8,7 +8,7 @@ export type ExperienceDataType = {
 };
 export type EducationDataType = {
   university: string;
-  grade: string;
+  degree: string;
   graduationStartYear: string;
   graduationEndYear: string;
 };
