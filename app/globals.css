@@ -21,16 +21,6 @@ ul li {
   }
 }
 
-ol li {
-  list-style-type: none;
-  display: flex;
-  flex-direction: row;
-  gap: 4px;
-  &:before {
-    list-style-type: decimal;
-    margin-left: 0px;
-  }
-}
 .ck-editor__editable_inline {
   padding: 0 30px !important;
   margin: 0 !important;
@@ -57,20 +47,12 @@ input[type='checkbox'] {
   }
 }
 
-@media print {
-  ol li {
-    list-style-type: none;
-  }
-
-  ol li:before {
-    /* content: '1' !important; */
-    list-style-type: decimal;
-    margin-left: -10px !important;
-  }
-}
-
 .ck-content li {
   display: flex;
   flex-direction: row;
   gap: 4px;
+}
+
+strong {
+  display: contents;
 }

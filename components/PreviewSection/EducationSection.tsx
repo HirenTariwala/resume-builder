@@ -17,7 +17,7 @@ function EducationSection(props: EducationProps) {
                 : val.university}
             </p>
             <p className='font-semibold text-sm'>
-              {!val?.grade && educationData.length <= 1 ? '60%' : val.grade}
+              {!val?.degree && educationData.length <= 1 ? '60%' : val?.degree}
             </p>
           </div>
           <label className='italic text-base font-bold text-gray-700'>
