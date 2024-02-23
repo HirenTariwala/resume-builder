@@ -281,15 +281,12 @@ export default function EditSection() {
               </div>
             </div>
             <div className='container mx-auto px-5 pt-2 pb-10'>
-              <div className='w-[100%]'>
-                <textarea
-                  onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) =>
-                    handleChange('about', e.target.value)
-                  }
-                  placeholder='About Your Self'
-                  className='p-2 rounded-sm outline-none mt-3 text-black w-[100%]'
+              <div className='w-[100%] text-black'>
+                <Editor
                   value={about}
-                  rows={5}
+                  handleChange={(value) => {
+                    handleChange('about', value);
+                  }}
                 />
               </div>
               <div className='flex gap-3 items-center mt-3'>
@@ -592,11 +589,11 @@ export default function EditSection() {
             </div>
 
             <div className='container mx-auto px-5 py-10 flex gap-5'>
-              <div className='relative rounded-md border border-gray-600 w-[50%]'>
+              <div className='relative rounded-md border border-gray-600 w-[50%] py-7'>
                 {skills.map((skill, index) => (
-                  <div className='container mx-auto p-5' key={index}>
+                  <div className='container mx-auto' key={index}>
                     <div className='pr-5 pl-5 flex-col items-baseline sm:flex sm:flex-row gap-5'>
-                      <div className='flex gap-2 w-[100%]'>
+                      <div className='flex gap-2 w-[100%] py-2'>
                         <Input
                           type='text'
                           name='skill'
@@ -608,7 +605,7 @@ export default function EditSection() {
                             )
                           }
                           placeholder='Add Skills'
-                          className='p-2 rounded-sm outline-none text-black w-[100%] mt-3'
+                          className='p-2 rounded-sm outline-none text-black w-[100%]'
                           value={skill.data}
                         />
                         <Image
@@ -637,11 +634,11 @@ export default function EditSection() {
                   />
                 </div>
               </div>
-              <div className='relative rounded-md border border-gray-600 w-[50%]'>
+              <div className='relative rounded-md border border-gray-600 w-[50%] py-7'>
                 {hobbies.map((hobby, index) => (
-                  <div className='container mx-auto p-5' key={index}>
+                  <div className='container mx-auto' key={index}>
                     <div className='pr-5 pl-5 flex-col items-baseline sm:flex sm:flex-row gap-5'>
-                      <div className='flex gap-2 w-[100%]'>
+                      <div className='flex gap-2 w-[100%] py-2'>
                         <Input
                           type='text'
                           name='hobby'
@@ -653,7 +650,7 @@ export default function EditSection() {
                             )
                           }
                           placeholder='Add Hobbies'
-                          className='p-2 rounded-sm outline-none mt-3 text-black w-[100%]'
+                          className='p-2 rounded-sm outline-none text-black w-[100%]'
                           value={hobby.data}
                         />
                         <Image
