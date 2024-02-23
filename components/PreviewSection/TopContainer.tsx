@@ -13,17 +13,17 @@ function TopContainer(props: TopContainerProps) {
       <div className='flex flex-col font-semibold text-[14px] mt-4 items-end'>
         {phone !== '' && (
           <div className='flex justify-center'>
-            Phone: <h1> {phone}</h1>
+            <h1>Phone: {phone}</h1>
           </div>
         )}
         {email !== '' && (
           <div className='flex justify-center'>
-            Email: <h1>{email}</h1>
+            <h1> Email: {email}</h1>
           </div>
         )}
         {address !== '' && (
           <div className='flex justify-center'>
-            Address: <h1>{address}</h1>
+            <h1>Address: {address}</h1>
           </div>
         )}
       </div>
